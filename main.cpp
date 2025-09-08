@@ -18,7 +18,10 @@ int main()
     std::string inFile = "inputFile.txt";
     std::string outFile = "outputFile.txt";
 
+    std::cout << "Choose how u want sort: \n 1 - Down \n 0 - Up\n";
     bool sort{};
+    std::cin >> sort;
+
 
     if (type == 1)
     {
@@ -37,7 +40,7 @@ int main()
             WriteToFile(outFile, array, size);
             break;
         case 3:
-            ReadFromFile(inFile, array);
+            ReadFromFile(inFile, array, size);
             ChooseSort(array, size,sort);
             PrintArray(array, size);
             break;
@@ -62,7 +65,7 @@ int main()
             WriteToFile(outFile, array, size);
             break;
         case 3:
-            ReadFromFile(inFile, array);
+            ReadFromFile(inFile, array,size);
             ChooseSort(array, size, sort);
             PrintArray(array, size);
             break;
@@ -87,7 +90,7 @@ int main()
             WriteToFile(outFile, array, size);
             break;
         case 3:
-            ReadFromFile(inFile, array);
+            ReadFromFile(inFile, array,size);
             ChooseSort(array, size, sort);
             PrintArray(array, size);
             break;
@@ -110,7 +113,7 @@ int main()
             std::cout << "Uncorrect";
             break;
         case 3:
-            ReadFromFile(inFile, array);
+            ReadFromFile(inFile, array,size);
             ChooseSort(array, size, sort);
             PrintArray(array, size);
             break;
@@ -133,7 +136,7 @@ int main()
             std::cout << "Uncorrect";
             break;
         case 3:
-            ReadFromFile(inFile, array);
+            ReadFromFile(inFile, array,size);
             ChooseSort(array, size, sort);
             PrintArray(array, size);
             break;

@@ -248,7 +248,7 @@ void MergeSort(type* arr, int32_t left, int32_t right)
 template <class type>
 void ChooseSort(type array, int32_t arraySize,bool sort)
 {
-	std::cout << "Choose the sort:\n\n1. BubbleSort\n2. ShakerSort\n3. CombSort\n4. InsertionSort\n5. SelectionSort\n6. QuickSort\n7. MergeSort(only up)";
+	std::cout << "Choose the sort:\n\n1. BubbleSort\n2. ShakerSort\n3. CombSort\n4. InsertionSort\n5. SelectionSort\n6. QuickSort\n7. MergeSort(only up)\n";
 	int16_t choise{};
 	std::cin >> choise;
 	switch (choise)
@@ -287,15 +287,17 @@ void PrintArray(T* arr, int32_t size)
     {
         std::cout << arr[i] << ' ';
     }
-    std::cout << '/n';
+    std::cout << '\n';
 }
 
 template<typename T>
-void ReadFromFile(std::string filename, T* arr)
+void ReadFromFile(std::string filename, T*& arr,int32_t& size)
 {
 	std::ifstream in(filename);
 	T temp{};
-	int32_t size{};
+	delete[] arr;
+	size = 0;
+
 	while (in >> temp)
 	{
 		++size;
